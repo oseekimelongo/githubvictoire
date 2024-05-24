@@ -1,0 +1,45 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200.. 1000&display=swap') ;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.nav{
+    @apply relative ml-10 
+    tracking-[1px]
+    duration-500 
+    hover:text-[#E84D3A]
+    
+    
+}
+.nav::after{ 
+   @apply  content-[''] bg-[#E84D3A] 
+    h-[5px] 
+    w-[0%] 
+    left-0
+    -bottom-[5px]
+    rounded-xl absolute
+    duration-500 
+}
+.nav:hover::after{
+    @apply w-[100%]
+}
+
+.nav:hover svg {
+    fill: rgb(255, 72, 0);
+}
+
+
+
+    @layer utilities {
+#welcome{
+    @apply relative text-slate-100 text-[3vw] uppercase font-[800]
+
+}
+#welcome::before {
+    @apply content-['welcome...'] absolute text-[#8b1835cc] 
+    border-r-2 border-orange-100 top-0  w-2 h-[100%] overflow-hidden
+ animate-animate
+}
+    }
